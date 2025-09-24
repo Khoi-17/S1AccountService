@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/users")
+@RequestMapping("/api/users")
 public class UserController {
 
     @Autowired
@@ -19,7 +19,7 @@ public class UserController {
         return ResponseEntity.ok(userService.findUserByUsername(username));
     }
 
-    @GetMapping("/getAlll")
+    @GetMapping("/getAll")
     public ResponseEntity<?> getAllUsers() {
         return ResponseEntity.ok(userService.findAllUsers());
     }
